@@ -24,4 +24,6 @@ export interface QuizState {
   isQuizComplete: boolean;
   selectedAnswer: number | null;
   showExplanation: boolean;
+  isAnswerChecked: boolean;
+  selectedQuestions: Question[];
 }

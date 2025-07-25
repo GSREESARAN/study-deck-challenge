@@ -64,9 +64,11 @@ export const QuestionCard = ({
           </Button>
         ))}
         
-        {showResult && selectedAnswer !== question.correctAnswer && question.explanation && (
+        {showResult && question.explanation && (
           <div className="mt-6 p-4 bg-muted rounded-lg border border-muted-foreground/20">
-            <h4 className="font-medium text-sm mb-2 text-warning">Explanation:</h4>
+            <h4 className="font-medium text-sm mb-2 text-warning">
+              {selectedAnswer === question.correctAnswer ? "Correct! 🎉" : "Explanation:"}
+            </h4>
             <p className="text-sm text-muted-foreground">{question.explanation}</p>
           </div>
         )}
